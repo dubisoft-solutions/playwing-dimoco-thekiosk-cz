@@ -1,0 +1,131 @@
+$font-icons-family-name: "IconsFont";
+@font-face {
+	font-family: "IconsFont";
+	src: url('../fonts/IconsFont.eot');
+	src: url('../fonts/IconsFont.eot?#iefix') format('eot'),
+		url('../fonts/IconsFont.woff2') format('woff2'),
+		url('../fonts/IconsFont.woff') format('woff'),
+		url('../fonts/IconsFont.ttf') format('truetype'),
+		url('../fonts/IconsFont.svg#IconsFont') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "IconsFont";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+$icon-name-arrow-down: "\E001"; 
+$icon-name-arrow-right: "\E002"; 
+$icon-name-arrow-top: "\E003"; 
+$icon-name-basketball: "\E004"; 
+$icon-name-close: "\E005"; 
+$icon-name-football: "\E006"; 
+$icon-name-menu: "\E007"; 
+$icon-name-minus: "\E008"; 
+$icon-name-plus-circle: "\E009"; 
+$icon-name-plus: "\E00A"; 
+$icon-name-prev: "\E00B"; 
+$icon-name-racquet: "\E00C"; 
+
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == arrow-down {
+		$char: "\E001";
+	}
+	@if $filename == arrow-right {
+		$char: "\E002";
+	}
+	@if $filename == arrow-top {
+		$char: "\E003";
+	}
+	@if $filename == basketball {
+		$char: "\E004";
+	}
+	@if $filename == close {
+		$char: "\E005";
+	}
+	@if $filename == football {
+		$char: "\E006";
+	}
+	@if $filename == menu {
+		$char: "\E007";
+	}
+	@if $filename == minus {
+		$char: "\E008";
+	}
+	@if $filename == plus-circle {
+		$char: "\E009";
+	}
+	@if $filename == plus {
+		$char: "\E00A";
+	}
+	@if $filename == prev {
+		$char: "\E00B";
+	}
+	@if $filename == racquet {
+		$char: "\E00C";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-arrow-down {
+	@include icon(arrow-down);
+}
+.icon-arrow-right {
+	@include icon(arrow-right);
+}
+.icon-arrow-top {
+	@include icon(arrow-top);
+}
+.icon-basketball {
+	@include icon(basketball);
+}
+.icon-close {
+	@include icon(close);
+}
+.icon-football {
+	@include icon(football);
+}
+.icon-menu {
+	@include icon(menu);
+}
+.icon-minus {
+	@include icon(minus);
+}
+.icon-plus-circle {
+	@include icon(plus-circle);
+}
+.icon-plus {
+	@include icon(plus);
+}
+.icon-prev {
+	@include icon(prev);
+}
+.icon-racquet {
+	@include icon(racquet);
+}
