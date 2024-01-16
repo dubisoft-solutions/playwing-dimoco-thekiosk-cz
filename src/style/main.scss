@@ -1,1 +1,97 @@
 @import 'theme/theme';
+html {
+    font-size: 16px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    .banner {
+        position: relative;
+        height: 92vw;
+        @media (min-width: 576px) {
+            height: 98vw;
+        }
+        @media (min-width: 768px) {
+            height: 740px;
+        }
+        @media (min-width: 992px) {
+            height: 480px;
+        }
+        @media (min-width: 1200px) {
+            height: 580px;
+        }
+        .banner-bg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            object-fit: cover;
+            @media (min-width: 576px) {
+                object-fit: contain;
+            }
+        }
+        .banner-block {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            .banner-text {
+                position: absolute;
+                bottom: -1.5rem;
+            }
+        }
+    }
+    .hero {
+        padding-top: 1.5rem;
+        padding-bottom: 2rem;
+    }
+    .form-label {
+        font-weight: 500;
+        font-size: 1rem;
+        color: $white;
+    }
+    .form-control {
+        font-weight: 500;
+        font-size: .875rem;
+        color: $grey;
+        padding: .9125rem 1rem;
+        border-radius: .375rem;
+        border: none;
+        margin-bottom: .875rem;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        outline: 0;
+         ::placeholder {
+            color: $grey;
+            text-align: center;
+        }
+         :focus,
+         :hover,
+         :active {
+            outline: 0;
+            outline-offset: 0;
+            box-shadow: none;
+            border: none;
+        }
+    }
+    .footer {
+        margin-top: auto;
+        .list-inline {
+            display: flex;
+            justify-content: center;
+            padding-left: 0;
+            .list-inline-item {
+                list-style-type: none;
+                padding: 0 .625rem;
+                padding-bottom: .25rem;
+                .btn-link {
+                    font-weight: 500;
+                    font-size: .75rem;
+                    color: white;
+                }
+            }
+        }
+    }
+}

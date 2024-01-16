@@ -1,4 +1,46 @@
 <!DOCTYPE html>
 <html lang="cz">
 //= html_partials/head.html
+
+<body>
+    <main class="main">
+        <!-- Main section -->
+        <section class="banner">
+            <img src="img/hero-bg.png" alt="Banner image" class="banner-bg">
+            <div class="banner-block">
+                <div class="container">
+                    <div class="banner-text">
+                        <p class="form-label">Klikněte prosím na přihlášení k odběru<br> služby The Kiosk:</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hero">
+            <div class="container">
+                <form method="get" action="pin.html">
+                    <input type="text" class="form-control" id="inputNumber" placeholder="XXXXXXXXX">
+                    <button type="submit" class="btn btn-success btn-block join-button text-uppercase">DALŠÍ</button>
+                </form>
+
+                <p class="text-center mb-4">99 Kč (48 hodin bezplatné<br> zkušební verze)</p>
+
+                <p class="mb-3">Kiosk je předplatitelská služba s neomezeným přístupem k více než 130 předním světovým novinám a časopisům</p>
+                <p class="mb-3">Předplatné bude automaticky obnoveno za 99 Kč (48 hodin bezplatného zkušebního období), dokud se neodhlásíte
+                </p>
+                <p class="mb-3">Předplatné můžete kdykoli zrušit v sekci <a href="#" class="btn-link">Můj účet</a>
+                </p>
+                <p class="mb-3">
+                    Abyste mohli využívat tuto službu, musíte být starší 18 let nebo mít povolení od rodičů nebo osoby, která je oprávněna platit váš účet
+                </p>
+                <p>Za procházení a stahování obsahu na tomto portálu budou účtovány poplatky za data. Poplatky budou odečteny ze zůstatku
+                </p>
+            </div>
+        </section>
+        <!-- Footer -->
+        //= html_partials/footer.html
+    </main>
+</body>
+
+//= html_partials/scripts.html
+
 </html>

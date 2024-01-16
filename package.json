@@ -33,5 +33,7 @@
     "sass": "^1.49.9"
   },
   "dependencies": {
+    "gulp-iconfont": "^11.0.1",
+    "gulp-iconfont-css": "^3.0.0"
   }
 }
