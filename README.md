@@ -2,7 +2,9 @@
 
 Markup project created by figma design.
 
-Demo link [url](https://dubisoft-solutions.github.io/playwing-sports-store/ "Demo project link")
+Demo 3g link [url](https://dubisoft-solutions.github.io/playwing-dimoco-thekiosk-cz/ "Demo 3g link")
+
+Demo otp link [url](https://dubisoft-solutions.github.io/playwing-dimoco-thekiosk-cz/otp.html "Demo otp link")
 
 ## Project structure ##
 
