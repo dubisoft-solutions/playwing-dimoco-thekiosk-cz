@@ -12,7 +12,7 @@ var path = {
     },
     src: {
         html: "./src/*.html",
-        js: ["./src/js/main.js", "./src/js/markup-controller.js"],
+        js: ["./src/js/main.js"],
         style: "./src/style/main.scss",
         fontIcons: "./src/font_icons/icons/*.svg",
         img: [
